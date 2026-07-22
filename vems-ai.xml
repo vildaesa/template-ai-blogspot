@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultmessages='false' b:responsive='true' b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale.language' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2001/bml/skin' xmlns:data='http://www.google.com/2001/bml/data' xmlns:expr='http://www.google.com/2001/bml/expr'>
+<head>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+    <meta content='blogger' name='generator'/>
+
+    <!-- ==================== DYNAMIC SEO TITLE OPTIMIZATION ==================== -->
+    <b:if cond='data:view.isHomepage'>
+        <title><data:blog.title/> | Solusi Cerdas Asisten Koding &amp; Dokumen AI</title>
+    <b:elseif cond='data:view.isErrorPage'/>
+        <title>Halaman Tidak Ditemukan - 404 | <data:blog.title/></title>
+    <b:else/>
+        <title><data:blog.pageName/> - <data:blog.title/></title>
+    </b:if>
+
+    <!-- ==================== ROBOTS META CONTROL ==================== -->
+    <b:if cond='data:view.isErrorPage'>
+        <meta content='noindex,nofollow' name='robots'/>
+    <b:else/>
+        <meta content='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' name='robots'/>
+    </b:if>
+
+    <!-- ==================== DYNAMIC META DESCRIPTION & KEYWORDS ==================== -->
+    <b:if cond='data:blog.metaDescription'>
+        <meta expr:content='data:blog.metaDescription' name='description'/>
+    <b:else/>
+        <meta expr:content='data:blog.pageTitle + &quot; - Platform asisten cerdas VEMS AI gratis di Blogspot. Solusi otomatisasi penulisan artikel, koding interaktif, dan analisis dokumen menggunakan Cloudflare R2.&quot;' name='description'/>
+    </b:if>
+    <meta content='vems ai, asisten ai blogger, coding assistant, cloudflare r2 storage, blogspot ai template, qwen 2.5 blogger, kecerdasan buatan gratis' name='keywords'/>
+
+    <!-- ==================== CANONICAL URL & ICON ==================== -->
+    <link expr:href='data:blog.url' rel='canonical'/>
+    <link expr:href='data:blog.homepageUrl + &quot;favicon.ico&quot;' rel='icon' type='image/x-icon'/>
+
+    <!-- ==================== OPEN GRAPH (FACEBOOK, WHATSAPP, LINKEDIN) ==================== -->
+    <meta expr:content='data:blog.pageTitle' property='og:title'/>
+    <meta expr:content='data:blog.url' property='og:url'/>
+    <b:if cond='data:blog.metaDescription'>
+        <meta expr:content='data:blog.metaDescription' property='og:description'/>
+    <b:else/>
+        <meta expr:content='data:blog.pageTitle + &quot; - Platform asisten cerdas VEMS AI gratis di Blogspot. Solusi otomatisasi penulisan artikel, koding interaktif, dan analisis dokumen.&quot;' property='og:description'/>
+    </b:if>
+    <meta content='website' property='og:type'/>
+    <meta expr:content='data:blog.title' property='og:site_name'/>
+    <!-- Open Graph Image Fallback (Menampilkan logo oranye VEMS AI saat link blog dibagikan) -->
+    <meta content='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80' property='og:image'/>
+    <meta content='1200' property='og:image:width'/>
+    <meta content='630' property='og:image:height'/>
+
+    <!-- ==================== TWITTER CARDS OPTIMIZATION ==================== -->
+    <meta content='summary_large_image' name='twitter:card'/>
+    <meta expr:content='data:blog.pageTitle' name='twitter:title'/>
+    <b:if cond='data:blog.metaDescription'>
+        <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+    <b:else/>
+        <meta expr:content='data:blog.pageTitle + &quot; - Nikmati asisten AI super cepat dan handal langsung dari blog Anda.&quot;' name='twitter:description'/>
+    </b:if>
+    <meta content='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80' name='twitter:image'/>
+
+    <!-- ==================== SCHEMA ORG STRUCTURED DATA (JSON-LD) ==================== -->
+    <script type='application/ld+json'>
+    {
+      &quot;@context&quot;: &quot;https://schema.org&quot;,
+      &quot;@type&quot;: &quot;WebSite&quot;,
+      &quot;name&quot;: &quot;<data:blog.title/>&quot;,
+      &quot;url&quot;: &quot;<data:data:blog.homepageUrl/>&quot;,
+      &quot;description&quot;: &quot;VEMS AI - Solusi Cerdas Asisten Koding, Chatbot, dan Integrasi Cloudflare R2 di Blogger.&quot;,
+      &quot;potentialAction&quot;: {
+        &quot;@type&quot;: &quot;SearchAction&quot;,
+        &quot;target&quot;: &quot;<data:blog.homepageUrl/>search?q={search_term_string}&quot;,
+        &quot;query-input&quot;: &quot;required name=search_term_string&quot;
+      }
+    }
+    </script>
+
+    <!-- Blogger Skin (Wajib Ada) -->
+    <b:skin><![CDATA[
+        #navbar-iframe { display: none !important; }
+        body { margin: 0; padding: 0; }
+    ]]></b:skin>
+
+    <!-- Tailwind CSS -->
+    <script src='https://cdn.tailwindcss.com'></script>
+    
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href='https://fonts.googleapis.com' rel='preconnect'/>
+    <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap' rel='stylesheet'/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet'/>
+
+    <!-- Marked.js (Markdown Parser) -->
+    <script src='https://cdn.jsdelivr.net/npm/marked/marked.min.js'></script>
+    <!-- DOMPurify (XSS Sanitizer) -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js'></script>
+    <!-- Highlight.js (Syntax Highlighter) -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js'></script>
+    <!-- Tokyo Night Dark Theme untuk Highlight.js -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/tokyo-night-dark.min.css' rel='stylesheet'/>
+
+    <style>
+    /*<![CDATA[*/
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #191916;
+            color: #e2e2d9;
+        }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2e2e2a;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #3e3e3a;
+        }
+
+        /* Markdown Overrides to match Claude AI theme */
+        .markdown-body h1, .markdown-body h2, .markdown-body h3 {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .markdown-body h1 { font-size: 1.5rem; }
+        .markdown-body h2 { font-size: 1.3rem; }
+        .markdown-body h3 { font-size: 1.15rem; }
+        .markdown-body p {
+            margin-bottom: 0.85rem;
+            line-height: 1.65;
+            color: #e2e2d9;
+        }
+        .markdown-body ul, .markdown-body ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        .markdown-body ul { list-style-type: disc; }
+        .markdown-body ol { list-style-type: decimal; }
+        .markdown-body li { margin-bottom: 0.35rem; }
+        .markdown-body blockquote {
+            border-left: 4px solid #d97753;
+            padding-left: 1rem;
+            color: #b5b5ad;
+            font-style: italic;
+            margin: 1rem 0;
+        }
+        .markdown-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+        .markdown-body th, .markdown-body td {
+            border: 1px solid #2e2e2a;
+            padding: 0.6rem 0.8rem;
+            text-align: left;
+        }
+        .markdown-body th {
+            background-color: #1d1d1a;
+            color: #ffffff;
+            font-weight: 600;
+        }
+    /*]]>*/
+    </style>
+
+    <script type='text/javascript'>
+    //<![CDATA[
+    var uri = window.location.toString();
+    if (uri.indexOf("?m=1","?m=0") > 0) {
+        var clean_uri = uri.substring(0, uri.indexOf("?m="));
+        window.history.replaceState({}, document.title, clean_uri);
+    }
+    //]]>
+    </script>
+
+</head>
+<body class='h-dvh w-screen overflow-hidden flex select-none bg-[#191916] text-[#e2e2d9]'>
+
+    <!-- ==================== SIDEBAR KIRI MENU VEMS AI ==================== -->
+    <aside class='fixed inset-y-0 left-0 w-[280px] bg-[#121210] border-r border-[#242421] flex flex-col transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out z-40 lg:static lg:h-full lg:flex-shrink-0' id='sidebarPanel'>
+
+        <!-- Header Brand Sidebar -->
+        <div class='flex justify-between items-center px-5 pt-6 pb-4'>
+            <div class='flex items-center gap-2'>
+                <div class='text-[#d97753]'>
+                    <svg class='w-6 h-6' height='24' viewBox='0 0 24 24' width='24'>
+                        <path d='M12 2C6.48 2 2 6.48 2 12C2 13.59 2.38 15.09 3.05 16.42L3 16.5C3 17.33 3.67 18 4.5 18H5.5C5.78 18 6 18.22 6 18.5V19.5C6 20.33 6.67 21 7.5 21H8.5C8.78 21 9 21.22 9 21.5V22H15V21.5C15 21.22 15.22 21 15.5 21H16.5C17.33 21 18 20.33 18 19.5V18.5C18 18.22 18.22 18 18.5 18H19.5C20.33 18 21 17.33 21 16.5V16.42C21.62 15.09 22 13.59 22 12C22 6.48 17.52 2 12 2ZM12 4C14.21 4 16 5.79 16 8C16 10.21 14.21 12 12 12C9.79 12 8 10.21 8 8C8 5.79 9.79 4 12 4ZM10 16C10 15.45 10.45 15 11 15H13C13.55 15 14 15.45 14 16C14 16.55 13.55 17 13 17H11C10.45 17 10 16.55 10 16Z' fill='currentColor'/>
+                    </svg>
+                </div>
+                <span class='serif-title text-xl font-semibold tracking-wider text-white'>VEMS AI</span>
+            </div>
+
+            <!-- Tombol Tutup Sidebar (Hanya terlihat di Mobile) -->
+            <button class='lg:hidden text-[#c2c2bb] hover:text-white p-1' id='closeSidebarBtn' onclick='closeSidebar()'>
+                <i class='fa-solid fa-xmark text-lg'></i>
+            </button>
+        </div>
+
+        <!-- Tombol Obrolan Baru -->
+        <div class='px-4 mb-3'>
+            <button class='w-full flex items-center justify-between bg-[#1d1d1a] border border-[#2c2c29] hover:border-[#d97753] hover:bg-[#252521] text-[#e2e2d9] transition-all py-2.5 px-4 rounded-xl font-medium text-sm focus:outline-none' id='sidebarNewChatBtn'>
+                <span class='flex items-center gap-2'>
+                    <i class='fa-regular fa-pen-to-square text-xs text-[#d97753]'></i>
+                    <span>Percakapan Baru</span>
+                </span>
+                <span class='text-[10px] bg-[#2d2d2a] px-1.5 py-0.5 rounded text-gray-400'>Ctrl K</span>
+            </button>
+        </div>
+
+        <!-- Navigasi Menu & Status Login -->
+        <div class='px-4 space-y-1 mb-4 text-[#e2e2d9]'>
+            <button class='w-full flex items-center gap-3 py-2 px-3 rounded-lg bg-[#1d1d1a] hover:bg-[#1d1d1a] transition-colors text-sm text-left' id='menuChatsBtn' onclick='changeMenu("Chats")'>
+                <svg class='text-orange-400' fill='none' height='18' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='18'>
+                    <path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'></path>
+                </svg>
+                <span class='font-medium'>Semua Obrolan</span>
+            </button>
+
+            <!-- Menu Gallery R2 -->
+            <button class='w-full flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-[#1d1d1a] transition-colors text-sm text-left text-gray-300' id='menuGalleryBtn' onclick='changeMenu("Gallery")'>
+                <i class='fa-regular fa-images text-[14px] text-gray-400'></i>
+                <span>Galeri Penyimpanan R2</span>
+            </button>
+
+            <!-- Tombol login dinamis -->
+            <button class='w-full flex items-center gap-3 py-2 px-3 rounded-lg bg-orange-500/10 text-orange-400 hover:bg-orange-500/20 transition-all text-xs font-semibold' id='sidebarGithubLoginBtn' onclick='initiateGithubAuth()'>
+                <i class='fa-brands fa-github text-sm'></i>
+                <span>Gunakan Sinkronisasi GitHub</span>
+            </button>
+        </div>
+
+        <div class='border-t border-[#242421] mx-4 mb-3'></div>
+
+        <!-- Bagian Recents Scrollable -->
+        <div class='px-4 flex-1 overflow-y-auto custom-scrollbar flex flex-col'>
+            <span class='text-[10px] text-gray-500 font-bold mb-2 tracking-wider uppercase'>Riwayat Sesi Obrolan</span>
+            <div class='space-y-0.5 text-[#e2e2d9]' id='recentsListContainer'>
+                <!-- Memuat riwayat sesi secara dinamis -->
+            </div>
+        </div>
+
+        <!-- Profil User Footer & Dropdown Wrapper -->
+        <div class='relative px-4 pb-4 pt-2 border-t border-[#242421] bg-[#121210]'>
+            <!-- Trigger Klik Profil Card -->
+            <div class='flex justify-between items-center bg-[#1d1d1a]/50 hover:bg-[#1d1d1a] p-2 rounded-xl cursor-pointer transition-all border border-[#2e2e2a]/40' id='userProfileTrigger' onclick='toggleProfileDropdown(event)'>
+                <div class='flex items-center gap-3 overflow-hidden'>
+                    <div class='w-8 h-8 rounded-full bg-[#d6d3c9] text-[#1c1c1b] flex items-center justify-center font-bold text-xs overflow-hidden flex-shrink-0' id='userAvatarText'>
+                        AN
+                    </div>
+                    <span class='text-sm font-medium text-gray-200 truncate max-w-[120px]' id='userProfileName'>Anonymous</span>
+                </div>
+                <i class='fa-solid fa-chevron-up text-[10px] opacity-40 mr-1'></i>
+            </div>
+
+            <!-- CARD PROFILE DROPDOWN (GITHUB STATS & LOGOUT) -->
+            <div class='hidden absolute bottom-16 left-4 right-4 bg-[#1e1e1c] border border-[#2e2e2a] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.6)] p-4 z-50 animate-[slideUp_0.2s_ease-out]' id='profileCardDropdown'>
+                <!-- Bagian Identitas -->
+                <div class='flex items-center gap-3 mb-3 pb-3 border-b border-[#2e2e2a]/50'>
+                    <div class='w-11 h-11 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400 font-bold text-sm overflow-hidden flex-shrink-0' id='dropdownAvatar'>
+                        AN
+                    </div>
+                    <div class='overflow-hidden'>
+                        <h4 class='text-sm font-bold text-white truncate' id='dropdownName'>Anonymous User</h4>
+                        <p class='text-[11px] text-orange-400 truncate' id='dropdownHandle'>@anonymous</p>
+                        <p class='text-[10px] text-gray-400 mt-0.5' id='dropdownLocation'><i class='fa-solid fa-location-dot text-[9px] mr-1 text-red-400/80'></i>Earth</p>
+                    </div>
+                </div>
+
+                <!-- Bio GitHub -->
+                <p class='text-[11px] text-gray-300 italic mb-4 line-clamp-2 leading-relaxed bg-[#121210]/60 p-2 rounded-lg' id='dropdownBio'>
+                    &quot;Menggunakan sistem koding VEMS AI asisten secara anonim tanpa integrasi awan.&quot;
+                </p>
+
+                <!-- Statistik GitHub (Hanya Tampil Jika Login) -->
+                <div class='grid grid-cols-3 gap-2 text-center bg-[#121210] p-2 rounded-xl mb-4' id='dropdownStatsContainer'>
+                    <div>
+                        <span class='block text-xs font-bold text-white' id='statRepos'>0</span>
+                        <span class='text-[9px] text-gray-500 uppercase tracking-wider'>Repos</span>
+                    </div>
+                    <div>
+                        <span class='block text-xs font-bold text-white' id='statFollowers'>0</span>
+                        <span class='text-[9px] text-gray-500 uppercase tracking-wider'>Followers</span>
+                    </div>
+                    <div>
+                        <span class='block text-xs font-bold text-white' id='statFollowing'>0</span>
+                        <span class='text-[9px] text-gray-500 uppercase tracking-wider'>Following</span>
+                    </div>
+                </div>
+
+                <!-- Tombol Navigasi Github & Keluar -->
+                <div class='space-y-1.5'>
+                    <a class='w-full py-1.5 px-3 bg-[#2d2d2a] hover:bg-[#3d3d3a] text-gray-200 rounded-lg text-xs font-medium flex items-center justify-center gap-2 transition-colors' href='https://github.com' id='dropdownGithubLink' target='_blank'>
+                        <i class='fa-brands fa-github text-sm text-orange-400'></i> Lihat Profil GitHub
+                    </a>
+
+                    <button class='hidden w-full py-1.5 px-3 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors' id='sidebarLogoutBtn' onclick='logoutSession()'>
+                        <i class='fa-solid fa-right-from-bracket text-xs'></i> Keluar Akun
+                    </button>
+
+                    <button class='w-full py-1.5 px-3 bg-orange-500/10 hover:bg-orange-500/20 text-orange-400 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition-colors' id='sidebarLoginPromptBtn' onclick='initiateGithubAuth()'>
+                        <i class='fa-brands fa-github text-xs'></i> Sinkronkan GitHub
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Overlay Latar Belakang untuk Mobile Sidebar -->
+    <div class='fixed inset-0 bg-black/60 z-30 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden' id='sidebarOverlay'></div>
+
+    <!-- ==================== AREA UTAMA ==================== -->
+    <div class='flex-1 flex flex-col h-full bg-[#191916] overflow-hidden relative'>
+
+        <!-- ==================== HEADER ATAS ==================== -->
+        <header class='h-14 flex justify-between items-center px-4 md:px-6 bg-[#191916]/80 backdrop-blur-md z-10 border-b border-[#242421]'>
+            <div class='flex items-center gap-3'>
+                <!-- Tombol Hamburger Mobile -->
+                <button class='text-[#c2c2bb] hover:text-white transition-colors focus:outline-none p-1.5 active:scale-95 duration-150 lg:hidden' id='openSidebarBtn'>
+                    <svg fill='none' height='16' viewBox='0 0 22 16' width='22' xmlns='http://www.w3.org/2000/svg'>
+                        <line stroke='currentColor' stroke-linecap='round' stroke-width='2' x1='0' x2='22' y1='1' y2='1'/>
+                        <line stroke='currentColor' stroke-linecap='round' stroke-width='2' x1='0' x2='16' y1='8' y2='8'/>
+                        <line stroke='currentColor' stroke-linecap='round' stroke-width='2' x1='0' x2='22' y1='15' y2='15'/>
+                    </svg>
+                </button>
+
+                <!-- Pemilih Model VEMS AI -->
+                <div class='relative'>
+                    <button class='flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#22221e] hover:bg-[#2b2b27] text-white hover:text-white text-xs font-medium transition-all border border-[#2e2e2a]' id='modelSelectorBtn'>
+                        <span class='w-1.5 h-1.5 rounded-full bg-[#d97753]'></span>
+                        <span id='selectedModel'>Qwen 3</span>
+                        <i class='fa-solid fa-chevron-down text-[8px] opacity-60'></i>
+                    </button>
+                    <!-- Dropdown List Model -->
+                    <div class='hidden absolute top-9 left-0 w-48 bg-[#1e1e1c] border border-[#2d2d2a] rounded-xl shadow-xl overflow-hidden z-20' id='modelDropdown'>
+                        <button class='w-full text-left px-4 py-3 text-xs hover:bg-[#2b2b28] text-white flex justify-between items-center border-b border-[#2d2d2a]/30' onclick='selectModel("Qwen 3")'>
+                            <span class='font-medium'>Qwen 3<br/>(Pro Reasoning)</span>
+                            <span class='text-[9px] text-orange-400 bg-orange-400/10 px-1 py-0.5 rounded'>Utama</span>
+                        </button>
+                        <button class='w-full text-left px-4 py-3 text-xs hover:bg-[#2b2b28] text-gray-300' onclick='selectModel("Qwen 2.5")'>
+                            <span>Qwen 2.5<br/>(Fast &amp; Code)</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indikator Konektivitas Server -->
+            <div class='flex items-center gap-4'>
+                <div class='flex items-center gap-2'>
+                    <span class='w-2 h-2 rounded-full bg-red-500 animate-pulse' id='connectionStatus'></span>
+                    <span class='text-xs text-gray-400 font-medium hidden sm:inline'>VEMS Server</span>
+                </div>
+
+                <!-- Banner Penawaran Pro -->
+                <button class='px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-orange-500/20 hover:border-orange-500/40 text-orange-400 text-xs font-semibold flex items-center gap-1.5 transition-all' onclick='openProModal()'>
+                    <i class='fa-solid fa-crown text-[10px]'></i> Upgrade Pro
+                </button>
+            </div>
+        </header>
+
+        <!-- ==================== TAMPILAN UTAMA 1: CHAT VIEW ==================== -->
+        <div class='flex-1 flex flex-col h-full overflow-hidden relative' id='chatView'>
+            <!-- AREA UTAMA CHAT (Scrollable) -->
+            <main class='flex-1 overflow-y-auto flex flex-col items-center px-4 md:px-8 pb-44 pt-6 custom-scrollbar' id='chatArea'>
+
+                <!-- TAMPILAN GREETING (Claude Style Welcome Screen) -->
+                <div class='w-full max-w-2xl flex-1 flex flex-col justify-center items-center py-12 transition-all duration-300' id='welcomeState'>
+                    <div class='mb-6'>
+                        <svg class='text-[#d97753]' fill='none' height='64' viewBox='0 0 64 64' width='64' xmlns='http://www.w3.org/2000/svg'>
+                            <path d='M32 4C32 4 33.5 18 36.5 21C39.5 24 53.5 24 53.5 24C53.5 24 39.5 26 36.5 29C33.5 32 32 46 32 46C32 46 30.5 32 27.5 29C24.5 26 10.5 24 10.5 24C10.5 24 24.5 24 27.5 21C30.5 18 32 4 32 4Z' fill='currentColor'/>
+                            <path d='M32 14C32 14 32.7 21 34.2 22.5C35.7 24 42.7 24 42.7 24C42.7 24 35.7 25 34.2 26.5C32.7 28 32 35 32 35C32 35 31.3 28 29.8 26.5C28.3 25 21.3 24 21.3 24C21.3 24 28.3 24 29.8 22.5C31.3 21 32 14 32 14Z' fill='#ffb499'/>
+                        </svg>
+                    </div>
+
+                    <!-- Teks Salam Personal Dinamis -->
+                    <h1 class='serif-title text-3xl md:text-4xl font-normal text-center text-white tracking-wide mb-3 leading-tight' id='greetingText'>
+                        Up late, Anonymous?
+                    </h1>
+                    <p class='text-gray-400 text-sm text-center max-w-md leading-relaxed mb-6' id='subGreeting'>
+                        Ada proyek hebat apa hari ini? Tuliskan ide Anda dan mari kita selesaikan bersama VEMS AI.
+                    </p>
+
+                    <!-- Tombol Shortcut Login -->
+                    <button class='px-5 py-2.5 bg-[#22221e] hover:bg-[#2c2c28] text-sm text-[#e2e2d9] font-medium rounded-xl transition-all border border-[#2e2e2a] flex items-center gap-2 shadow-lg' id='quickLoginBtn' onclick='initiateGithubAuth()'>
+                        <i class='fa-brands fa-github text-base text-orange-400'></i> Masuk dengan GitHub
+                    </button>
+                </div>
+
+                <!-- TAMPILAN RIWAYAT CHAT AKTIF -->
+                <div class='hidden w-full max-w-3xl flex-1 flex flex-col py-4 space-y-8' id='chatHistoryState'>
+                    <!-- Pesan dinamis dimasukkan di sini -->
+                </div>
+
+            </main>
+
+            <!-- DECK INPUT CHAT MELAYANG -->
+            <div class='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#191916] via-[#191916]/95 to-transparent px-4 pb-6 pt-10 flex flex-col items-center pointer-events-none z-10'>
+
+                <!-- Berkas Terlampir (R2) -->
+                <div class='hidden w-full max-w-3xl px-4 py-2 bg-[#22221e] border border-[#2d2d2a] rounded-xl flex justify-between items-center text-xs mb-3 pointer-events-auto shadow-xl' id='attachedFileContainer'>
+                    <div class='flex items-center gap-2.5 text-orange-400'>
+                        <i class='fa-regular fa-file-code text-base'></i>
+                        <span class='font-medium truncate max-w-[240px] md:max-w-md' id='attachedFileName'>dokumen.txt</span>
+                    </div>
+                    <button class='text-gray-400 hover:text-white p-1 transition-colors' onclick='removeAttachedFile()'>
+                        <i class='fa-solid fa-xmark'></i>
+                    </button>
+                </div>
+
+                <!-- Kontainer Utama Input Chat -->
+                <div class='w-full max-w-3xl bg-[#22221f] rounded-2xl border border-[#2e2e2a] shadow-[0_12px_40px_rgba(0,0,0,0.5)] p-2.5 pointer-events-auto transition-all focus-within:border-[#d97753]/60 focus-within:ring-1 focus-within:ring-[#d97753]/30'>
+
+                    <!-- Textarea Utama -->
+                    <div class='px-2 pt-1'>
+                        <textarea class='w-full bg-transparent text-[#e2e2d9] placeholder-[#5d5d57] text-sm resize-none focus:outline-none custom-scrollbar py-1' id='chatInput' placeholder='Tanya VEMS AI atau unggah berkas pendukung...' rows='1' style='max-height: 160px;'></textarea>
+                    </div>
+
+                    <!-- Bar Tombol Aksi Bawah Input -->
+                    <div class='flex justify-between items-center mt-2 pt-2 border-t border-[#2e2e2a]/40'>
+                        <div class='flex items-center gap-1.5'>
+                            <!-- Tombol Tambah Berkas (+) -->
+                            <button class='w-8 h-8 rounded-lg bg-[#2e2e2a] hover:bg-[#383833] flex items-center justify-center text-gray-300 hover:text-white transition-colors relative' onclick='triggerFileUpload()' title='Unggah berkas analisis'>
+                                <i class='fa-solid fa-plus text-xs'></i>
+                                <input class='hidden' id='fileSelectorInput' onchange='handleR2FileUpload(event)' type='file'/>
+                            </button>
+
+                            <span class='text-[10px] text-[#5d5d57] hidden sm:inline ml-1'>Kirim dokumen untuk dianalisis oleh AI</span>
+                        </div>
+
+                        <!-- Tombol Mic & Kirim -->
+                        <div class='flex items-center gap-2'>
+                            <button class='w-8 h-8 rounded-lg bg-[#2e2e2a] hover:bg-[#383833] flex items-center justify-center text-gray-300 hover:text-white transition-colors' id='micBtn' title='Input suara'>
+                                <i class='fa-solid fa-microphone text-xs'></i>
+                            </button>
+
+                            <button class='px-4 h-8 rounded-lg bg-[#d97753] hover:bg-[#e68460] text-white flex items-center gap-1.5 text-xs font-semibold transition-transform active:scale-95 cursor-pointer' id='sendBtn' title='Kirim pesan'>
+                                <span>Kirim</span>
+                                <svg fill='none' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'>
+                                    <path d='M12 4V20M12 4L5 11M12 4L19 11' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class='text-[10px] text-gray-500 mt-2 pointer-events-auto'>
+                    Model: Qwen — Konten dapat berbeda. Silakan tinjau kembali info penting.
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TAMPILAN UTAMA 2: GALLERY VIEW (R2 CLOUD) ==================== -->
+        <div class='hidden flex-1 flex flex-col h-full overflow-hidden bg-[#191916]' id='galleryView'>
+            <!-- Header Gallery -->
+            <div class='p-6 md:px-8 border-b border-[#242421] bg-[#121210]/30'>
+                <div class='max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4'>
+                    <div>
+                        <h2 class='serif-title text-2xl font-semibold text-white'>Galeri Penyimpanan R2</h2>
+                        <p class='text-xs text-gray-400 mt-1'>Kelola, tinjau, unggah, dan hapus semua aset berkas Anda langsung dari Cloudflare R2 Storage.</p>
+                    </div>
+
+                    <!-- Tombol Upload Galeri -->
+                     <div id='lockScreen'>
+                    <button class='px-4 py-2 bg-[#d97753] hover:bg-[#e68460] text-white text-xs font-semibold rounded-xl flex items-center gap-2 transition-transform active:scale-95 shadow-md' onclick='triggerGalleryUpload()'>
+                        <i class='fa-solid fa-cloud-arrow-up'></i>
+                        <span>Unggah Berkas</span>
+                    </button>
+                    <input class='hidden' id='galleryFileInput' onchange='handleGalleryR2Upload(event)' type='file'/>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Lock Screen Jika Belum Login -->
+            <div class='flex-1 flex flex-col justify-center items-center p-8 text-center bg-[#191916]' id='galleryLockScreen'>
+                <div class='w-16 h-16 bg-[#2d2d2a] rounded-2xl border border-[#3e3e3a] flex items-center justify-center text-[#d97753] mb-4 text-xl'>
+                    <i class='fa-solid fa-lock animate-pulse'></i>
+                </div>
+                <h3 class='serif-title text-lg font-bold text-white mb-2'>Sinkronisasi Diperlukan</h3>
+                <p class='text-xs text-gray-400 max-w-xs mb-6 leading-relaxed'>
+                    Fitur penyimpanan Cloudflare R2 hanya tersedia untuk pengguna yang telah melakukan integrasi akun GitHub.
+                </p>
+                <button class='px-5 py-2.5 bg-[#22221e] hover:bg-[#2c2c28] border border-[#2e2e2a] text-xs font-medium rounded-xl text-white flex items-center gap-2 transition-all' onclick='initiateGithubAuth()'>
+                    <i class='fa-brands fa-github text-sm text-orange-400'></i> Masuk dan Mulai Menggunakan
+                </button>
+            </div>
+
+            <!-- Content Area Galeri (Tampil jika sudah login) -->
+            <div class='hidden flex-1 overflow-y-auto p-6 md:p-8 custom-scrollbar bg-[#191916]' id='galleryContentArea'>
+                <div class='max-w-6xl mx-auto'>
+                    <!-- Drop Zone Pengunggahan Visual -->
+                    <div class='border-2 border-dashed border-[#2e2e2a] hover:border-[#d97753]/60 bg-[#121210]/20 p-8 rounded-2xl text-center cursor-pointer transition-all mb-8 flex flex-col items-center justify-center' id='dragDropZone'>
+                        <i class='fa-solid fa-cloud-arrow-up text-3xl text-[#d97753] opacity-60 mb-3'></i>
+                        <h4 class='text-sm font-semibold text-white mb-1'>Seret &amp; letakkan berkas di sini untuk mengunggah</h4>
+                        <p class='text-[10px] text-gray-500'>Mendukung berkas Gambar, Dokumen Teks, atau Audio (Maksimal 10MB)</p>
+                    </div>
+
+                    <!-- Loader Visual -->
+                    <div class='flex flex-col items-center justify-center py-16' id='galleryLoader'>
+                        <span class='w-8 h-8 rounded-full border-2 border-t-2 border-stone-800 border-t-[#d97753] animate-spin mb-3'></span>
+                        <p class='text-xs text-gray-400'>Menghubungkan ke Storage Cloudflare R2...</p>
+                    </div>
+
+                    <!-- Empty State Gallery -->
+                    <div class='hidden text-center py-16 border border-[#2e2e2a]/50 rounded-2xl bg-[#121210]/10' id='galleryEmptyState'>
+                        <i class='fa-regular fa-folder-open text-4xl text-gray-500 mb-4 block'></i>
+                        <h4 class='text-sm font-semibold text-white mb-1'>Penyimpanan Kosong</h4>
+                        <p class='text-xs text-gray-500 max-w-xs mx-auto leading-relaxed'>Belum ada berkas yang diunggah ke server R2 Anda. Unggah berkas pertama Anda sekarang!</p>
+                    </div>
+
+                    <!-- Grid Item Berkas R2 -->
+                    <div class='hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4' id='galleryGrid'>
+                        <!-- Card list berkas dirender di sini secara dinamis -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ==================== MODAL UPGRADE VEMS PRO ==================== -->
+    <div class='fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden px-4' id='proModal'>
+        <div class='bg-gradient-to-b from-[#221e30] to-[#121115] border border-[#40355c] p-6 rounded-2xl max-w-sm w-full text-center shadow-2xl'>
+            <div class='w-12 h-12 bg-[#a78bfa]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#a78bfa]'>
+                <i class='fa-solid fa-crown text-2xl'></i>
+            </div>
+            <h3 class='text-lg font-bold mb-2 serif-title text-white'>Langganan VEMS AI Pro</h3>
+            <p class='text-xs text-gray-300 mb-5 leading-relaxed'>
+                Dapatkan akses ke model Claude versi kustom dengan respons super cepat, tanpa batasan kuota, serta pemrosesan dokumen besar melalui Cloudflare R2 Storage.
+            </p>
+            <button class='w-full py-2.5 bg-[#a78bfa] hover:bg-[#b59cfd] text-[#121115] font-bold rounded-xl text-xs shadow-lg shadow-[#a78bfa]/20 mb-3 transition-colors' onclick='simulatePro()'>
+                Berlangganan Sekarang (Simulasi)
+            </button>
+            <button class='text-xs text-gray-400 hover:text-white underline' onclick='closeProModal()'>Kembali ke Obrolan</button>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFIKASI CUSTOM -->
+    <div class='fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#2d2d2a] text-[#e2e2d9] text-xs py-2.5 px-4 rounded-xl shadow-2xl transition-all duration-300 translate-y-24 opacity-0 pointer-events-none z-50 border border-[#3d3d3a] flex items-center gap-2' id='toast'>
+        <i class='fa-solid fa-circle-check text-green-400' id='toastIcon'></i>
+        <span id='toastMsg'>Selesai</span>
+    </div>
+
+    <!-- INTERACTIVE VOICE / MIC MODAL -->
+    <div class='fixed inset-0 bg-black/90 flex flex-col items-center justify-center z-50 hidden' id='voiceModal'>
+        <div class='flex items-end gap-2 h-20 mb-6'>
+            <div class='w-2.5 bg-orange-400 rounded-full h-4 animate-[pulse_1s_infinite_0s]'></div>
+            <div class='w-2.5 bg-orange-400 rounded-full h-12 animate-[pulse_1s_infinite_0.2s]'></div>
+            <div class='w-2.5 bg-orange-400 rounded-full h-16 animate-[pulse_1s_infinite_0.4s]'></div>
+            <div class='w-2.5 bg-orange-400 rounded-full h-8 animate-[pulse_1s_infinite_0.1s]'></div>
+            <div class='w-2.5 bg-orange-400 rounded-full h-10 animate-[pulse_1s_infinite_0.3s]'></div>
+        </div>
+        <p class='text-white serif-title text-lg mb-1'>Mendengarkan Suara...</p>
+        <p class='text-gray-400 text-xs mb-6'>Ucapkan instruksi Anda sekarang</p>
+        <button class='w-14 h-14 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center text-white text-lg active:scale-95 transition-transform shadow-lg' id='stopVoiceBtn'>
+            <i class='fa-solid fa-stop'></i>
+        </button>
+    </div>
+
+    <!-- ==================== BLOGGER REQUIREMENT SECTION (HIDDEN) ==================== -->
+    <div style='display: none !important;'>
+        <b:section id='main-blogger-content' showaddelement='yes'>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'/>
+        </b:section>
+    </div>
+
+    <!-- ==================== INTEGRATED JAVASCRIPT LOGIC ==================== -->
+    <script type='text/javascript'>
+    //<![CDATA[
+        // Kunci API Server Backend VEMS AI
+        const workerApiUrl = "https://yyyyyyyy.xxxxxxxxx.workers.dev";
+
+        let authToken = localStorage.getItem("CLOUDFLARE_AUTH_TOKEN") || "";
+        let userProfile = null;
+        let attachedFileContent = "";
+        let currentModel = "Qwen 3"; 
+        let currentActiveMenu = "Chats"; 
+
+        // SISTEM MULTI-SESSION
+        let allSessions = [];       
+        let activeSessionId = "";   
+
+        // Selectors Utama
+        const openSidebarBtn = document.getElementById('openSidebarBtn');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const sidebarPanel = document.getElementById('sidebarPanel');
+        const welcomeState = document.getElementById('welcomeState');
+        const chatHistoryState = document.getElementById('chatHistoryState');
+        const chatInput = document.getElementById('chatInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const greetingText = document.getElementById('greetingText');
+        const subGreeting = document.getElementById('subGreeting');
+        const connectionStatus = document.getElementById('connectionStatus');
+        const quickLoginBtn = document.getElementById('quickLoginBtn');
+
+        // Sidebar & Profile Elements
+        const sidebarGithubLoginBtn = document.getElementById('sidebarGithubLoginBtn');
+        const sidebarLogoutBtn = document.getElementById('sidebarLogoutBtn');
+        const sidebarLoginPromptBtn = document.getElementById('sidebarLoginPromptBtn');
+        const userProfileName = document.getElementById('userProfileName');
+        const userAvatarText = document.getElementById('userAvatarText');
+        const recentsListContainer = document.getElementById('recentsListContainer');
+        const sidebarNewChatBtn = document.getElementById('sidebarNewChatBtn');
+        const proModal = document.getElementById('proModal');
+
+        // Elements untuk Profile Card Dropdown
+        const profileCardDropdown = document.getElementById('profileCardDropdown');
+        const dropdownAvatar = document.getElementById('dropdownAvatar');
+        const dropdownName = document.getElementById('dropdownName');
+        const dropdownHandle = document.getElementById('dropdownHandle');
+        const dropdownLocation = document.getElementById('dropdownLocation');
+        const dropdownBio = document.getElementById('dropdownBio');
+        const dropdownStatsContainer = document.getElementById('dropdownStatsContainer');
+        const dropdownGithubLink = document.getElementById('dropdownGithubLink');
+        const statRepos = document.getElementById('statRepos');
+        const statFollowers = document.getElementById('statFollowers');
+        const statFollowing = document.getElementById('statFollowing');
+
+        // Views Elements
+        const chatView = document.getElementById('chatView');
+        const galleryView = document.getElementById('galleryView');
+        const menuChatsBtn = document.getElementById('menuChatsBtn');
+        const menuGalleryBtn = document.getElementById('menuGalleryBtn');
+
+        // Gallery Storage R2 Elements
+        const galleryLockScreen = document.getElementById('galleryLockScreen');
+        const lockScreen = document.getElementById('lockScreen');
+        const galleryContentArea = document.getElementById('galleryContentArea');
+        const galleryEmptyState = document.getElementById('galleryEmptyState');
+        const galleryGrid = document.getElementById('galleryGrid');
+        const galleryLoader = document.getElementById('galleryLoader');
+        const galleryFileInput = document.getElementById('galleryFileInput');
+        const dragDropZone = document.getElementById('dragDropZone');
+
+        // File Uploader
+        const fileSelectorInput = document.getElementById('fileSelectorInput');
+        const attachedFileContainer = document.getElementById('attachedFileContainer');
+        const attachedFileName = document.getElementById('attachedFileName');
+
+        // Voice
+        const micBtn = document.getElementById('micBtn');
+        const voiceModal = document.getElementById('voiceModal');
+        const stopVoiceBtn = document.getElementById('stopVoiceBtn');
+
+        // ==================== MARKED & DOMPURIFY CONFIGURATION ====================
+        const customRenderer = {
+            code(token, infostring, escaped) {
+                let codeText = "";
+                let lang = "";
+
+                if (typeof token === 'object' && token !== null) {
+                    codeText = token.text || "";
+                    lang = token.lang || "";
+                } else {
+                    codeText = token || "";
+                    lang = infostring || "";
+                }
+
+                const cleanLang = (lang || '').match(/\S*/)[0];
+                const cleanCode = codeText;
+                const blockId = 'code-' + Math.random().toString(36).substr(2, 9);
+
+                const highlighted = cleanLang && hljs.getLanguage(cleanLang) 
+                    ? hljs.highlight(cleanCode, { language: cleanLang }).value 
+                    : escapeHtml(cleanCode);
+
+                const hasPreview = cleanLang === 'html' || cleanLang === 'svg';
+                const previewBtn = hasPreview 
+                    ? `<button data-action="preview" data-target="${blockId}" class="px-2 py-1 bg-amber-600/20 hover:bg-amber-600/40 text-amber-400 text-[10px] rounded flex items-center gap-1 transition-all border border-amber-500/20"><i class="fa-solid fa-play text-[9px]"></i> Preview</button>` 
+                    : '';
+
+                return `
+                    <div class="my-4 rounded-xl overflow-hidden border border-[#2e2e2a] bg-[#121210] shadow-md">
+                        <div class="flex justify-between items-center px-4 py-2 bg-[#1d1d1a] border-b border-[#2e2e2a]/40 text-xs text-gray-400">
+                            <span class="font-mono text-[10px] uppercase tracking-wider text-orange-400">${cleanLang || 'plaintext'}</span>
+                            <div class="flex items-center gap-2">
+                                ${previewBtn}
+                                <button data-action="copy" data-target="${blockId}" class="px-2 py-1 bg-[#2d2d2a] hover:bg-[#3d3d3a] text-gray-300 text-[10px] rounded flex items-center gap-1 transition-all border border-[#3d3d3a]/30">
+                                    <i class="fa-regular fa-copy text-[9px]"></i> Salin
+                                </button>
+                            </div>
+                        </div>
+                        <pre class="p-4 overflow-x-auto text-xs leading-relaxed custom-scrollbar"><code id="${blockId}" class="hljs language-${cleanLang || 'plaintext'}">${highlighted}</code></pre>
+                        <div id="preview-${blockId}" class="hidden p-4 border-t border-[#2e2e2a]/40 bg-white text-black h-80 overflow-auto rounded-b-xl relative">
+                            <div class="absolute top-2 right-2 z-10 flex gap-2">
+                                <button data-action="close-preview" data-target="${blockId}" class="bg-red-500 hover:bg-red-600 text-white text-[9px] px-2 py-1 rounded shadow-md"><i class="fa-solid fa-xmark"></i> Tutup</button>
+                            </div>
+                            <iframe id="iframe-${blockId}" class="w-full h-full border-none bg-white"></iframe>
+                        </div>
+                    </div>
+                `;
+            }
+        };
+
+        marked.use({ renderer: customRenderer });
+
+        document.addEventListener('click', (e) => {
+            const target = e.target.closest('[data-action]');
+            if (!target) return;
+
+            const action = target.getAttribute('data-action');
+            const blockId = target.getAttribute('data-target');
+
+            if (action === 'copy') {
+                copyCodeBlock(blockId);
+            } else if (action === 'preview') {
+                previewHtmlCode(target);
+            } else if (action === 'close-preview') {
+                closePreview(blockId);
+            }
+        });
+
+        function copyCodeBlock(id) {
+            const codeElem = document.getElementById(id);
+            if (!codeElem) return;
+            const textToCopy = codeElem.innerText;
+
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            showToast("Kode berhasil disalin ke clipboard!");
+        }
+
+        function previewHtmlCode(buttonElement) {
+            const blockContainer = buttonElement.closest('.my-4');
+            const codeBlock = blockContainer.querySelector('code');
+            const iframe = blockContainer.querySelector('iframe');
+            const previewSection = blockContainer.querySelector('[id^="preview-"]');
+
+            if (!codeBlock || !iframe || !previewSection) return;
+
+            const codeSource = codeBlock.innerText;
+            previewSection.classList.remove('hidden');
+
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(codeSource);
+            iframeDoc.close();
+
+            showToast("Live HTML Preview diaktifkan.");
+        }
+
+        function closePreview(blockId) {
+            const previewSection = document.getElementById(`preview-${blockId}`);
+            if (previewSection) {
+                previewSection.classList.add('hidden');
+            }
+        }
+
+        // ==================== MAIN SERVICE LOGIC ====================
+        function checkUrlAuthToken() {
+            const params = new URLSearchParams(window.location.search);
+            const urlToken = params.get("token");
+            if (urlToken) {
+                localStorage.setItem("CLOUDFLARE_AUTH_TOKEN", urlToken);
+                authToken = urlToken;
+                window.history.replaceState({}, document.title, window.location.pathname);
+                showToast("Autentikasi Berhasil! Sesi VEMS AI Anda aktif.");
+            }
+        }
+
+        function adjustGreeting() {
+            const hour = new Date().getHours();
+            let name = userProfile ? userProfile.name : "Anonymous";
+            let message = "";
+
+            if (hour >= 5 && hour < 12) {
+                message = `Good morning, ${name}!`;
+            } else if (hour >= 12 && hour < 17) {
+                message = `Good afternoon, ${name}!`;
+            } else if (hour >= 17 && hour < 21) {
+                message = `Good evening, ${name}!`;
+            } else {
+                message = `Up late, ${name}?`;
+            }
+
+            greetingText.textContent = message;
+        }
+
+        async function fetchUserProfile() {
+            connectionStatus.className = "w-2 h-2 rounded-full bg-yellow-500 animate-pulse";
+            try {
+                const response = await fetch(`${workerApiUrl}/api/auth/me`, {
+                    headers: { "Authorization": `Bearer ${authToken}` }
+                });
+                const data = await response.json();
+
+                if (data.authenticated && data.user) {
+                    userProfile = data.user;
+
+                    userProfileName.textContent = userProfile.name;
+                    userAvatarText.innerHTML = `<img src="${userProfile.avatar}" class="w-full h-full object-cover" alt="User Avatar" />`;
+
+                    dropdownAvatar.innerHTML = `<img src="${userProfile.avatar}" class="w-full h-full object-cover" alt="Dropdown Avatar" />`;
+                    dropdownName.textContent = userProfile.name;
+                    dropdownHandle.textContent = `@${userProfile.login}`;
+                    dropdownLocation.innerHTML = `<i class="fa-solid fa-location-dot text-[9px] mr-1 text-red-400/80"></i>${userProfile.location || "Earth"}`;
+                    dropdownBio.textContent = userProfile.bio ? `"${userProfile.bio}"` : '"No bio available on GitHub."';
+
+                    statRepos.textContent = userProfile.public_repos || 0;
+                    statFollowers.textContent = userProfile.followers || 0;
+                    statFollowing.textContent = userProfile.following || 0;
+                    dropdownGithubLink.href = userProfile.html_url || "https://github.com";
+
+                    sidebarGithubLoginBtn.classList.add('hidden');
+                    sidebarLogoutBtn.classList.remove('hidden');
+                    sidebarLoginPromptBtn.classList.add('hidden');
+                    quickLoginBtn.classList.add('hidden');
+
+                    connectionStatus.className = "w-2 h-2 rounded-full bg-green-500";
+                    subGreeting.textContent = `Server VEMS AI terhubung secara aman di cloud.`;
+
+                    galleryLockScreen.classList.add('hidden');
+                    galleryContentArea.classList.remove('hidden');
+                    lockScreen.classList.remove('hidden');
+
+                    await loadHistoryFromKV();
+
+                    if (currentActiveMenu === "Gallery") {
+                        await loadR2FilesFromCloud();
+                    }
+                } else {
+                    applyAnonymousUi();
+                }
+            } catch (err) {
+                console.error("VEMS Server Offline / Gangguan Jaringan:", err);
+                connectionStatus.className = "w-2 h-2 rounded-full bg-red-500 animate-pulse";
+                subGreeting.textContent = "Gagal menghubungi VEMS Server. Coba muat ulang halaman.";
+                applyAnonymousUi();
+            }
+            adjustGreeting();
+        }
+
+        function applyAnonymousUi() {
+            userProfile = null;
+            userProfileName.textContent = "Anonymous";
+            userAvatarText.innerHTML = "AN";
+
+            dropdownAvatar.innerHTML = "AN";
+            dropdownName.textContent = "Anonymous User";
+            dropdownHandle.textContent = "@anonymous";
+            dropdownLocation.innerHTML = `<i class="fa-solid fa-location-dot text-[9px] mr-1 text-red-400/80"></i>Earth`;
+            dropdownBio.textContent = '"Menggunakan sistem koding VEMS AI asisten secara anonim tanpa integrasi awan."';
+            statRepos.textContent = "0";
+            statFollowers.textContent = "0";
+            statFollowing.textContent = "0";
+            dropdownGithubLink.href = "https://github.com";
+
+            sidebarGithubLoginBtn.classList.remove('hidden');
+            sidebarLogoutBtn.classList.add('hidden');
+            sidebarLoginPromptBtn.classList.remove('hidden');
+            quickLoginBtn.classList.remove('hidden');
+            subGreeting.textContent = "Gunakan secara anonim atau masuk via GitHub untuk mencatat histori di KV Cloud.";
+
+            galleryLockScreen.classList.remove('hidden');
+            galleryContentArea.classList.add('hidden');
+            lockScreen.classList.add('hidden');
+
+            loadLocalHistoryOnly();
+        }
+
+        function toggleProfileDropdown(event) {
+            event.stopPropagation();
+            profileCardDropdown.classList.toggle('hidden');
+        }
+
+        document.addEventListener('click', (event) => {
+            if (!profileCardDropdown.classList.contains('hidden') && !event.target.closest('#profileCardDropdown') && !event.target.closest('#userProfileTrigger')) {
+                profileCardDropdown.classList.add('hidden');
+            }
+        });
+
+        function changeMenu(menu) {
+            currentActiveMenu = menu;
+            closeSidebar();
+
+            menuChatsBtn.className = "w-full flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-[#1d1d1a] transition-colors text-sm text-left text-gray-300";
+            menuChatsBtn.querySelector('svg').className = "text-gray-400";
+            menuGalleryBtn.className = "w-full flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-[#1d1d1a] transition-colors text-sm text-left text-gray-300";
+            menuGalleryBtn.querySelector('i').className = "fa-regular fa-images text-[14px] text-gray-400";
+
+            if (menu === "Chats") {
+                chatView.classList.remove('hidden');
+                galleryView.classList.add('hidden');
+
+                menuChatsBtn.className = "w-full flex items-center gap-3 py-2 px-3 rounded-lg bg-[#1d1d1a] hover:bg-[#1d1d1a] transition-colors text-sm text-left";
+                menuChatsBtn.querySelector('svg').className = "text-orange-400";
+            } else if (menu === "Gallery") {
+                chatView.classList.add('hidden');
+                galleryView.classList.remove('hidden');
+
+                menuGalleryBtn.className = "w-full flex items-center gap-3 py-2 px-3 rounded-lg bg-[#1d1d1a] hover:bg-[#1d1d1a] transition-colors text-sm text-left";
+                menuGalleryBtn.querySelector('i').className = "fa-regular fa-images text-[14px] text-orange-400";
+
+                if (userProfile) {
+                    loadR2FilesFromCloud();
+                }
+            }
+        }
+
+        // ==================== GALERI R2 INTERACTION LOGIC ====================
+        function triggerGalleryUpload() {
+            galleryFileInput.click();
+        }
+
+        async function loadR2FilesFromCloud() {
+            galleryLoader.classList.remove('hidden');
+            galleryEmptyState.classList.add('hidden');
+            galleryGrid.classList.add('hidden');
+
+            try {
+                const response = await fetch(`${workerApiUrl}/api/media`, {
+                    headers: { "Authorization": `Bearer ${authToken}` }
+                });
+                const data = await response.json();
+                galleryLoader.classList.add('hidden');
+
+                if (data.success && data.files) {
+                    renderGalleryGrid(data.files);
+                } else {
+                    galleryEmptyState.classList.remove('hidden');
+                }
+            } catch (err) {
+                galleryLoader.classList.add('hidden');
+                galleryEmptyState.classList.remove('hidden');
+                showToast("Gagal memuat galeri berkas R2.");
+            }
+        }
+
+        function renderGalleryGrid(files) {
+            galleryGrid.innerHTML = '';
+
+            if (files.length === 0) {
+                galleryEmptyState.classList.remove('hidden');
+                galleryGrid.classList.add('hidden');
+                return;
+            }
+
+            galleryEmptyState.classList.add('hidden');
+            galleryGrid.classList.remove('hidden');
+
+            files.forEach((file) => {
+                const card = document.createElement('div');
+                card.className = "bg-[#1e1e1c] border border-[#2e2e2a]/60 hover:border-[#d97753]/50 rounded-2xl overflow-hidden p-3 transition-all flex flex-col justify-between shadow-sm group";
+
+                const formattedSize = formatBytes(file.size);
+                const fileDate = new Date(file.uploaded).toLocaleDateString("id-ID", {
+                    day: "numeric", month: "short", year: "numeric"
+                });
+
+                let visualThumbnail = '';
+                if (file.fileType === "image") {
+                    visualThumbnail = `<div class="w-full h-32 rounded-xl bg-[#121210] overflow-hidden mb-3 relative flex items-center justify-center">
+                        <img src="${file.httpUrl}" class="w-full h-full object-cover group-hover:scale-105 duration-300" alt="Visual Asset" />
+                    </div>`;
+                } else if (file.fileType === "audio") {
+                    visualThumbnail = `<div class="w-full h-32 rounded-xl bg-orange-500/5 text-orange-400 flex flex-col items-center justify-center mb-3">
+                        <i class="fa-regular fa-circle-play text-3xl mb-1 opacity-80"></i>
+                        <span class="text-[9px] font-semibold uppercase tracking-widest opacity-60">Audio File</span>
+                    </div>`;
+                } else if (file.fileType === "document") {
+                    visualThumbnail = `<div class="w-full h-32 rounded-xl bg-amber-500/5 text-amber-400 flex flex-col items-center justify-center mb-3">
+                        <i class="fa-regular fa-file-lines text-3xl mb-1 opacity-80"></i>
+                        <span class="text-[9px] font-semibold uppercase tracking-widest opacity-60">Dokumen</span>
+                    </div>`;
+                } else {
+                    visualThumbnail = `<div class="w-full h-32 rounded-xl bg-[#2e2e2a]/30 text-gray-400 flex flex-col items-center justify-center mb-3">
+                        <i class="fa-solid fa-paperclip text-3xl mb-1 opacity-60"></i>
+                        <span class="text-[9px] font-semibold uppercase tracking-widest opacity-60">Berkas</span>
+                    </div>`;
+                }
+
+                card.innerHTML = `
+                    <div>
+                        ${visualThumbnail}
+                        <h4 class="text-xs font-bold text-white truncate px-1" title="${file.name}">${escapeHtml(file.name)}</h4>
+                        <div class="flex justify-between items-center text-[10px] text-gray-500 px-1 mt-1.5">
+                            <span>${formattedSize}</span>
+                            <span>${fileDate}</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 mt-4 pt-2.5 border-t border-[#2e2e2a]/40">
+                        <a href="${file.httpUrl}" target="_blank" class="flex-1 py-1.5 bg-[#2d2d2a] hover:bg-[#3d3d3a] text-gray-200 rounded-lg text-[10px] font-medium flex items-center justify-center gap-1 transition-all">
+                            <i class="fa-solid fa-download"></i> Unduh
+                        </a>
+                        <button onclick="deleteGalleryR2File('${file.key}')" class="px-2.5 py-1.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 hover:text-red-300 rounded-lg text-[10px] font-medium transition-all" title="Hapus berkas">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                    </div>
+                `;
+
+                galleryGrid.appendChild(card);
+            });
+        }
+
+        async function handleGalleryR2Upload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            await executeR2UploadPipeline(file);
+        }
+
+        async function executeR2UploadPipeline(file) {
+            const formData = new FormData();
+            formData.append("file", file);
+
+            showToast("Mengunggah berkas ke R2...");
+
+            try {
+                const response = await fetch(`${workerApiUrl}/api/media/upload`, {
+                    method: "POST",
+                    headers: { "Authorization": `Bearer ${authToken}` },
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    showToast("Berkas sukses ditambahkan ke R2!");
+                    loadR2FilesFromCloud();
+                } else {
+                    showToast("Sesi kedaluwarsa. Silakan masuk kembali.");
+                }
+            } catch (err) {
+                showToast("Gagal melakukan upload.");
+            }
+        }
+
+        async function deleteGalleryR2File(fileKey) {
+            if (confirm("Apakah Anda yakin ingin menghapus berkas ini secara permanen dari Cloudflare R2 Storage?")) {
+                showToast("Menghapus berkas...");
+                try {
+                    const response = await fetch(`${workerApiUrl}/api/media?key=${encodeURIComponent(fileKey)}`, {
+                        method: "DELETE",
+                        headers: { "Authorization": `Bearer ${authToken}` }
+                    });
+                    const data = await response.json();
+
+                    if (response.ok && data.success) {
+                        showToast("Berkas berhasil terhapus!");
+                        loadR2FilesFromCloud();
+                    } else {
+                        showToast("Aksi gagal: Sesi tidak sah.");
+                    }
+                } catch (err) {
+                    showToast("Kesalahan sistem saat menghapus berkas.");
+                }
+            }
+        }
+
+        function formatBytes(bytes, decimals = 1) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const dm = decimals < 0 ? 0 : decimals;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+        }
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dragDropZone.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dragDropZone.addEventListener(eventName, () => {
+                dragDropZone.className = "border-2 border-dashed border-[#d97753] bg-[#d97753]/5 p-8 rounded-2xl text-center cursor-pointer transition-all mb-8 flex flex-col items-center justify-center";
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dragDropZone.addEventListener(eventName, () => {
+                dragDropZone.className = "border-2 border-dashed border-[#2e2e2a] hover:border-[#d97753]/60 bg-[#121210]/20 p-8 rounded-2xl text-center cursor-pointer transition-all mb-8 flex flex-col items-center justify-center";
+            }, false);
+        });
+
+        dragDropZone.addEventListener('drop', (e) => {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            if (files.length > 0) {
+                executeR2UploadPipeline(files[0]);
+            }
+        }, false);
+
+        dragDropZone.addEventListener('click', () => {
+            triggerGalleryUpload();
+        });
+
+        // ==================== MULTI-SESSION LOGIC ====================
+        async function loadHistoryFromKV() {
+            try {
+                const res = await fetch(`${workerApiUrl}/api/chat/history`, {
+                    headers: { "Authorization": `Bearer ${authToken}` }
+                });
+                const data = await res.json();
+                if (data.success && data.sessions) {
+                    allSessions = data.sessions;
+                    renderRecentsList();
+                }
+            } catch (err) {
+                console.error("Gagal sinkronisasi data dari KV:", err);
+            }
+        }
+
+        async function saveSessionsToKV() {
+            if (!userProfile) {
+                localStorage.setItem("VEMS_SESSIONS_LOCAL", JSON.stringify(allSessions));
+                renderRecentsList();
+                return;
+            }
+            try {
+                await fetch(`${workerApiUrl}/api/chat/history`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({ sessions: allSessions })
+                });
+                renderRecentsList();
+            } catch (err) {
+                console.error("Gagal mengunggah sesi chat ke KV:", err);
+            }
+        }
+
+        function loadLocalHistoryOnly() {
+            const raw = localStorage.getItem("VEMS_SESSIONS_LOCAL");
+            if (raw) {
+                allSessions = JSON.parse(raw);
+                renderRecentsList();
+            }
+        }
+
+        function renderRecentsList() {
+            recentsListContainer.innerHTML = '';
+
+            if (allSessions.length === 0) {
+                recentsListContainer.innerHTML = `<span class="text-[10px] text-[#575752] italic pl-1">Belum ada percakapan terbaru</span>`;
+                return;
+            }
+
+            allSessions.forEach((session) => {
+                const button = document.createElement('button');
+                const isActive = session.sessionId === activeSessionId;
+                button.className = `w-full text-left px-3 py-2 rounded-lg text-xs transition-all overflow-hidden text-ellipsis whitespace-nowrap block ${isActive ? 'bg-[#1d1d1a] text-white border-l-2 border-[#d97753]' : 'text-gray-300 hover:bg-[#1d1d1a] hover:text-white'}`;
+                button.innerHTML = `<i class="fa-regular fa-comment ${isActive ? 'text-[#d97753]' : 'text-gray-500'} mr-2 text-[10px]"></i>${escapeHtml(session.title)}`;
+                button.title = session.title;
+                button.addEventListener('click', () => {
+                    restoreChatSession(session.sessionId);
+                });
+                recentsListContainer.appendChild(button);
+            });
+        }
+
+        function restoreChatSession(sessionId) {
+            activeSessionId = sessionId;
+            closeSidebar();
+            changeMenu('Chats'); 
+
+            const targetSession = allSessions.find(s => s.sessionId === sessionId);
+            if (!targetSession) return;
+
+            welcomeState.classList.add('opacity-0');
+            setTimeout(() => {
+                welcomeState.style.display = 'none';
+                chatHistoryState.innerHTML = '';
+                chatHistoryState.classList.remove('hidden');
+
+                targetSession.messages.forEach(msg => {
+                    appendMessageBubble(msg.content, msg.role);
+                });
+
+                renderRecentsList(); 
+                showToast("Sesi obrolan dipulihkan.");
+            }, 200);
+        }
+
+        function initiateGithubAuth() {
+            showToast("Menghubungkan ke GitHub...");
+            window.location.href = `${workerApiUrl}/api/auth/github`;
+        }
+
+        async function logoutSession() {
+            if (confirm("Apakah Anda yakin ingin keluar dari VEMS AI?")) {
+                try {
+                    await fetch(`${workerApiUrl}/api/auth/logout`, {
+                        method: "POST",
+                        headers: { "Authorization": `Bearer ${authToken}` }
+                    });
+                } catch (e) {}
+                localStorage.removeItem("CLOUDFLARE_AUTH_TOKEN");
+                authToken = "";
+                showToast("Sesi akun dinonaktifkan.");
+                closeSidebar();
+                profileCardDropdown.classList.add('hidden');
+                fetchUserProfile();
+            }
+        }
+
+        async function clearLocalHistory() {
+            if (confirm("Bersihkan seluruh riwayat obrolan Anda?")) {
+                if (userProfile) {
+                    try {
+                        await fetch(`${workerApiUrl}/api/chat/history`, {
+                            method: "DELETE",
+                            headers: { "Authorization": `Bearer ${authToken}` }
+                        });
+                    } catch (e) {}
+                }
+                localStorage.removeItem("VEMS_SESSIONS_LOCAL");
+                allSessions = [];
+                activeSessionId = "";
+                startNewChat();
+                showToast("Riwayat obrolan dibersihkan.");
+            }
+        }
+
+        function triggerFileUpload() {
+            fileSelectorInput.click();
+        }
+
+        async function handleR2FileUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const formData = new FormData();
+            formData.append("file", file);
+
+            showToast("Mengunggah berkas ke VEMS R2 Storage...");
+
+            try {
+                const response = await fetch(`${workerApiUrl}/api/media/upload`, {
+                    method: "POST",
+                    headers: { "Authorization": `Bearer ${authToken}` },
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (data.success || response.ok) {
+                    showToast("Dokumen berhasil dilampirkan!");
+                    attachedFileName.textContent = file.name;
+                    attachedFileContainer.classList.remove('hidden');
+
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        attachedFileContent = e.target.result;
+                    };
+                    reader.readAsText(file);
+                } else {
+                    showToast(`Akses Ditolak: Silakan login via GitHub terlebih dahulu.`);
+                }
+            } catch (err) {
+                showToast("Gagal mengunggah berkas ke Cloud R2.");
+            }
+        }
+
+        function removeAttachedFile() {
+            attachedFileContainer.classList.add('hidden');
+            attachedFileContent = "";
+            fileSelectorInput.value = "";
+            showToast("Lampiran berkas dihapus.");
+        }
+
+        async function sendMessage() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            if (!activeSessionId) {
+                activeSessionId = 'session-' + Math.random().toString(36).substr(2, 9);
+                allSessions.unshift({
+                    sessionId: activeSessionId,
+                    title: text.substring(0, 30) + (text.length > 30 ? '...' : ''),
+                    messages: []
+                });
+            }
+
+            const currentSession = allSessions.find(s => s.sessionId === activeSessionId);
+
+            if (welcomeState.style.display !== 'none') {
+                welcomeState.classList.add('opacity-0');
+                setTimeout(() => {
+                    welcomeState.style.display = 'none';
+                    chatHistoryState.classList.remove('hidden');
+                }, 200);
+            }
+
+            appendMessageBubble(text, 'user');
+            currentSession.messages.push({ role: "user", content: text });
+
+            chatInput.value = '';
+            chatInput.style.height = 'auto';
+
+            const typingIndicator = appendTypingIndicator();
+
+            try {
+                const response = await fetch(`${workerApiUrl}/`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        message: text,
+                        fileContext: attachedFileContent,
+                        model: currentModel, 
+                        history: currentSession.messages
+                    })
+                });
+
+                const data = await response.json();
+                typingIndicator.remove();
+
+                if (response.ok && data.success && data.response) {
+                    appendMessageBubble(data.response, 'assistant');
+                    currentSession.messages.push({ role: "assistant", content: data.response });
+
+                    saveSessionsToKV();
+
+                    if (attachedFileContent) {
+                        removeAttachedFile();
+                    }
+                } else {
+                    appendMessageBubble(`Gagal menghubungkan AI: ${data.error || "Kesalahan server"}`, 'assistant');
+                }
+            } catch (err) {
+                if (typeof typingIndicator !== 'undefined' && typingIndicator) {
+                    typingIndicator.remove();
+                }
+                appendMessageBubble("Koneksi gagal atau model sibuk. Silakan coba lagi.", 'assistant');
+            }
+        }
+
+        function appendMessageBubble(text, sender) {
+            const wrapper = document.createElement('div');
+            wrapper.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'} w-full transition-opacity duration-300`;
+
+            const isUser = sender === 'user';
+            wrapper.innerHTML = isUser
+                ? `<div class="max-w-[85%] sm:max-w-[75%] bg-[#22221f] text-[#e2e2d9] border border-[#2e2e2a] px-4 py-3 rounded-2xl rounded-tr-sm text-sm leading-relaxed whitespace-pre-wrap shadow-sm">${escapeHtml(text)}</div>`
+                : `<div class="flex gap-4 w-full">
+                    <div class="w-8 h-8 rounded-full bg-[#d97753]/15 flex items-center justify-center flex-shrink-0 text-[#d97753] border border-[#d97753]/30">
+                        <svg width="15" height="15" viewBox="0 0 64 64" fill="none">
+                            <path d="M32 4C32 4 33.5 18 36.5 21C39.5 24 53.5 24 53.5 24C53.5 24 39.5 26 36.5 29C33.5 32 32 46 32 46C32 46 30.5 32 27.5 29C24.5 26 10.5 24 10.5 24C10.5 24 24.5 24 27.5 21C30.5 18 32 4 32 4Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="text-[#e2e2d9] text-[14px] leading-relaxed flex-1 overflow-hidden">
+                        <p class="font-bold text-[10px] text-orange-400 tracking-widest mb-1 uppercase">${currentModel}</p>
+                        <div class="markdown-body text-gray-200">${formatText(text)}</div>
+                    </div>
+                   </div>`;
+
+            chatHistoryState.appendChild(wrapper);
+            scrollChat();
+        }
+
+        function appendTypingIndicator() {
+            const bubble = document.createElement('div');
+            bubble.className = "flex justify-start w-full";
+            bubble.innerHTML = `
+                <div class="flex gap-4 items-center">
+                    <div class="w-8 h-8 rounded-full bg-[#d97753]/15 flex items-center justify-center flex-shrink-0 text-[#d97753] border border-[#d97753]/30">
+                        <svg width="15" height="15" viewBox="0 0 64 64" fill="none">
+                            <path d="M32 4C32 4 33.5 18 36.5 21C39.5 24 53.5 24 53.5 24C53.5 24 39.5 26 36.5 29C33.5 32 32 46 32 46C32 46 30.5 32 27.5 29C24.5 26 10.5 24 10.5 24C10.5 24 24.5 24 27.5 21C30.5 18 32 4 32 4Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="flex gap-1 items-center bg-[#22221f]/40 px-3 py-2 rounded-lg">
+                        <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span>
+                        <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.15s"></span>
+                        <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.3s"></span>
+                    </div>
+                </div>
+            `;
+            chatHistoryState.appendChild(bubble);
+            scrollChat();
+            return bubble;
+        }
+
+        function scrollChat() {
+            const chatArea = document.getElementById('chatArea');
+            if (chatArea) {
+                chatArea.scrollTo({ top: chatArea.scrollHeight, behavior: 'smooth' });
+            }
+        }
+
+        function escapeHtml(text) {
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        function formatText(text) {
+            const rawHtml = marked.parse(text);
+            const cleanHtml = DOMPurify.sanitize(rawHtml, {
+                ADD_TAGS: ['iframe', 'button', 'span', 'i'],
+                ADD_ATTR: ['id', 'class', 'target', 'frameborder', 'src', 'width', 'height', 'data-action', 'data-target'],
+                FORCE_BODY: true
+            });
+            return cleanHtml;
+        }
+
+        // Pemilih Model AI
+        const modelSelectorBtn = document.getElementById('modelSelectorBtn');
+        const modelDropdown = document.getElementById('modelDropdown');
+        const selectedModel = document.getElementById('selectedModel');
+
+        modelSelectorBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            modelDropdown.classList.toggle('hidden');
+        });
+        document.addEventListener('click', () => {
+            modelDropdown.classList.add('hidden');
+        });
+        function selectModel(name) {
+            currentModel = name;
+            selectedModel.textContent = name;
+            showToast(`Model beralih ke: ${name}`);
+        }
+
+        // Kontrol Sidebar Panel (Responsive)
+        openSidebarBtn.addEventListener('click', () => {
+            sidebarOverlay.classList.remove('pointer-events-none', 'opacity-0');
+            sidebarPanel.classList.remove('-translate-x-full');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            closeSidebar();
+        });
+
+        function closeSidebar() {
+            sidebarOverlay.classList.add('pointer-events-none', 'opacity-0');
+            sidebarPanel.classList.add('-translate-x-full');
+        }
+
+        sidebarNewChatBtn.addEventListener('click', startNewChat);
+        function startNewChat() {
+            activeSessionId = ""; 
+            closeSidebar();
+            changeMenu('Chats'); 
+            welcomeState.style.display = 'flex';
+            welcomeState.classList.remove('opacity-0');
+            chatHistoryState.classList.add('hidden');
+            chatHistoryState.innerHTML = '';
+            chatInput.value = '';
+            chatInput.style.height = 'auto';
+            renderRecentsList();
+            showToast("Memulai obrolan baru.");
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                startNewChat();
+            }
+        });
+
+        // Modal VEMS Pro
+        function openProModal() {
+            proModal.classList.remove('hidden');
+        }
+        function closeProModal() {
+            proModal.classList.add('hidden');
+        }
+        function simulatePro() {
+            proModal.classList.add('hidden');
+            showToast("Selamat! Akun Anda aktif sebagai VEMS AI Pro.", true);
+        }
+
+        // Mic & Voice Simulation
+        micBtn.addEventListener('click', () => {
+            voiceModal.classList.remove('hidden');
+        });
+        stopVoiceBtn.addEventListener('click', () => {
+            voiceModal.classList.add('hidden');
+            chatInput.value = `Berikut adalah contoh halaman web portofolio interaktif sederhana menggunakan Tailwind CSS:\n\n\`\`\`html\n<!DOCTYPE html>\n<html>\n<head>\n  <script src="https://cdn.tailwindcss.com"><\\/script>\n</head>\n<body class="bg-slate-900 text-white flex flex-col items-center justify-center min-h-screen p-4">\n  <div class="max-w-md bg-slate-800 p-6 rounded-2xl shadow-xl text-center border border-slate-700">\n    <h1 class="text-2xl font-bold text-amber-400 mb-2">Halo Dunia!</h1>\n    <p class="text-xs text-slate-300 mb-4">Ini adalah live preview HTML langsung dari asisten koding VEMS AI.</p>\n    <button onclick="alert('Tombol berfungsi!')" class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-slate-900 text-xs font-bold rounded-xl transition-all shadow-lg shadow-amber-500/20">Klik Saya</button>\n  </div>\n</body>\n</html>\n\`\`\``;
+            chatInput.style.height = 'auto';
+            chatInput.style.height = (chatInput.scrollHeight) + 'px';
+            showToast("Simulasi kode HTML berhasil dibuat!");
+        });
+
+        // Toast Notifikasi
+        function showToast(msg, isCrown = false) {
+            const toast = document.getElementById('toast');
+            const toastIcon = document.getElementById('toastIcon');
+            const toastMsg = document.getElementById('toastMsg');
+
+            toastMsg.textContent = msg;
+            if (isCrown) {
+                toast.className = "fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#3a3022] text-[#f59e0b] text-xs py-2.5 px-4 rounded-xl shadow-2xl transition-all duration-300 z-50 border border-[#f59e0b]/30 flex items-center gap-2";
+                toastIcon.className = "fa-solid fa-crown text-[#f59e0b]";
+            } else {
+                toast.className = "fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#2d2d2a] text-[#e2e2d9] text-xs py-2.5 px-4 rounded-xl shadow-2xl transition-all duration-300 z-50 border border-[#3d3d3a] flex items-center gap-2";
+                toastIcon.className = "fa-solid fa-circle-check text-green-400";
+            }
+
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        chatInput.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+        sendBtn.addEventListener('click', sendMessage);
+
+        chatInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        checkUrlAuthToken();
+        fetchUserProfile();
+    //]]>
+    </script>
+</body>
+</html>
