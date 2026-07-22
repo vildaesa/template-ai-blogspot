@@ -148,7 +148,7 @@ Jika Anda ingin mengembangkan proyek ini lebih lanjut, silakan fork repository d
 
 ## Lisensi
 
-Proyek ini menggunakan lisensi MIT – Anda bebas menggunakan, memodifikasi, dan mendistribusikan ulang dengan tetap mencantumkan atribusi.
+Proyek ini menggunakan lisensi MPL-2.0 license – Anda bebas menggunakan, memodifikasi, dan mendistribusikan ulang dengan tetap mencantumkan atribusi.
 
 ---
 
